@@ -11,7 +11,7 @@ namespace Banapuchin.Libraries
         public bool IsFiring, FollowPlayer;
         public FusionPlayer SelectedFusionPlayer;
         private GameObject pointer;
-        private LineRenderer line;
+        public LineRenderer line;
         private GameObject gunObj;
 
         public void OnEnable()

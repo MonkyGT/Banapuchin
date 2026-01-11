@@ -42,11 +42,13 @@ namespace Banapuchin.Mods.Gun
                 _cameraObj.transform.SetParent(gun.SelectedFusionPlayer.transform.Find("Head"));
                 _cameraObj.transform.localPosition = Vector3.zero;
                 _cameraObj.transform.localRotation = Quaternion.identity;
+                gun.line.enabled = false;
                 UnityEngine.Object.DontDestroyOnLoad(_cameraObj);
             }
 
             if (!gun.IsFiring && _cameraObj != null)
             {
+                gun.line.enabled = true;
                 _cameraObj.Obliterate(out _cameraObj);
             }
         }
